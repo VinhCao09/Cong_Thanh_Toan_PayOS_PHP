@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tạo Link thanh toán</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* Basic styling for the steps */
+        .step {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        #button-container {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body style="display: flex; flex-direction: column; align-items: center;">
+    <div style="padding: 10px; border: 2px solid blue; border-radius: 10px; width: 300px;">
+        <div id="step1" class="step active">
+            <h3>Bước 1: Thông tin sản phẩm</h3>
+            <p><strong>Tên sản phẩm:</strong> Mì tôm Hảo Hảo ly</p>
+            <p><strong>Giá tiền:</strong> 2000 VNĐ</p>
+            <p><strong>Số lượng:</strong> 1</p>
+            <div id="button-container">
+                <button onclick="nextStep(1)" style="width: 100%; background-color: blue; color: white; border: none; padding: 10px; font-size: 15px;">
+                    Tiếp theo
+                </button>
+            </div>
+        </div>
+        
+        <div id="step2" class="step">
+            <h3>Bước 2: Nhập thông tin người dùng</h3>
+            <form id="userInfoForm" action="checkout.php" method="POST">
+                <input type="text" name="fullName" placeholder="Họ và tên" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;">
+                <input type="tel" name="phoneNumber" placeholder="Số điện thoại" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;">
+                <input type="email" name="email" placeholder="Email" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;">
+                
+                <div id="button-container">
+                    <button type="button" onclick="prevStep(2)" style="width: 100%; background-color: gray; color: white; border: none; padding: 10px; font-size: 15px;">
+                        Quay lại
+                    </button>
+                    <button type="submit" style="width: 100%; background-color: blue; color: white; border: none; padding: 10px; font-size: 15px;">
+                        Tạo Link thanh toán
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Function to move to the next step
+        function nextStep(step) {
+            document.getElementById(`step${step}`).classList.remove('active');
+            document.getElementById(`step${step + 1}`).classList.add('active');
+        }
+
+        // Function to go back to the previous step
+        function prevStep(step) {
+            document.getElementById(`step${step}`).classList.remove('active');
+            document.getElementById(`step${step - 1}`).classList.add('active');
+        }
+    </script>
+</body>
+</html>
