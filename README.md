@@ -1,6 +1,5 @@
 # Cong_Thanh_Toan_PayOS_PHP
 Cổng thanh toán trực tuyến với PayOS_Embedded sử dụng PHP cho website bán hàng
-# SOIL_INTEGRATED_Sensor_NPK-PH-MOISTURE-EC_InterfaceESP32
 Truy cập: https://my.payos.vn tiến hành tạo tài khoản và xác thực ngân hàng với BankHub. Sau khi liên kết tài khoản ngân hàng và tạo kênh thanh toán thành công bạn sẽ có 3 tham số để kết nối tới PayOS bao gồm Client ID, API Key và Checksum Key.
 
 ## Sử dụng Composer quản lý gói thư viện (Môi trường test từ đầu, trong trường hợp code này tôi đã tích hợp sẵn gói thư viện rồi)
