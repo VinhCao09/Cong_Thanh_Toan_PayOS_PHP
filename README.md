@@ -2,6 +2,7 @@
 Cổng thanh toán trực tuyến với PayOS_Embedded sử dụng PHP cho website bán hàng
 Truy cập: https://my.payos.vn tiến hành tạo tài khoản và xác thực ngân hàng với BankHub. Sau khi liên kết tài khoản ngân hàng và tạo kênh thanh toán thành công bạn sẽ có 3 tham số để kết nối tới PayOS bao gồm Client ID, API Key và Checksum Key.
 
+
 ### Khởi động một tool như XAMPP để khởi động môi trường Apache để gói thư viện hoạt động!
 
 ## Sử dụng Composer quản lý gói thư viện (Môi trường test từ đầu, trong trường hợp code này tôi đã tích hợp sẵn gói thư viện rồi)
